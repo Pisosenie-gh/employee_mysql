@@ -69,7 +69,8 @@ services:
         - traefik.http.routers.${STACK_NAME?Variable not set}-proxy-http.middlewares=${STACK_NAME?Variable not set}-www-redirect,${STACK_NAME?Variable not set}-https-redirect
 
   db:
-    image: mysql:5.7.22
+    image: mariadb:10.8.3
+    restart: always
     volumes:
       - app-db-data:/var/lib/mysql/
       - './conf.d:/etc/mysql/conf.d:ro'

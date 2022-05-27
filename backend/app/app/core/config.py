@@ -43,7 +43,7 @@ class Settings(BaseSettings):
     def assemble_db_connection(cls, v: Optional[str], values: Dict[str, Any]) -> Any:
         if isinstance(v, str):
             return v
-        return f'mysql+pymysql://{values.get("MYSQL_USER")}:{values.get("MYSQL_PASSWORD")}@{values.get("MYSQL_HOST")}/{values.get("MYSQL_DATABASE")+"?charset=utf8mb4"}'
+        return f'mariadb+mariadbconnector://{values.get("MYSQL_USER")}:{values.get("MYSQL_PASSWORD")}@{values.get("MYSQL_HOST")}/{values.get("MYSQL_DATABASE")}'
 
     SMTP_TLS: bool = True
     SMTP_PORT: Optional[int] = None

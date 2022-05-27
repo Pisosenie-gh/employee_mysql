@@ -1,6 +1,6 @@
 from typing import Optional, List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from datetime import date
 
 from .employee_status import EmployeeStatus
@@ -134,20 +134,17 @@ class InternalEmployee(InternalEmployeeBase):
     gender: str
     isActive: int
     status: EmployeeStatus
-    ldapLogin: Optional[LdapLogin] 
+    ldapLogin: Optional[LdapLogin] = None
     grade: Grade
     marital_status: MaritalStatus
     militaryServiceAttitude: MilitaryServiceAttitude
     nationalityGender: NationalityGender
 
 
-    class Config:
-        orm_mode = True
-
-
 
     class Config:
         orm_mode = True
+        
 
 
 # Properties properties stored in DB

@@ -29,3 +29,30 @@ DETAIL:  Key (militaryServiceAttitudeId)=(321412412) is not present in table "mi
 2022-05-13 08:31:54,876:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
 2022-05-13 08:32:20,678:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
 2022-05-16 10:47:12,171:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:39:37,672:app.api.api_v1.endpoints.internal_employee:WARNING:POST url=http://localhost/api/v1/internal-employee/, (mariadb.IntegrityError) Cannot add or update a child row: a foreign key constraint fails (`employee`.`internal_employee`, CONSTRAINT `internal_employee_ibfk_6` FOREIGN KEY (`statusId`) REFERENCES `employee_status` (`id`))
+[SQL: INSERT INTO internal_employee (`individualId`, `legalOrganizationlId`, `fullnameDeclinationId`, `financialAccountId`, iin, `personnelNumber`, `lastName`, `firstName`, `middleName`, `birthDate`, `workStartDate`, `isReserveMember`, `isInsider`, `isActive`, gender, `statusId`, `gradeId`, `maritalStatusId`, `militaryServiceAttitudeId`, `nationalityGenderId`, `ldapLoginId`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (321312, 11, 11, 1312, '41244215', '412321', '1', '2', '3', '2022-05-27', '2022-05-27', 1, 1, 1, 'ewq', 1, 1, 1, 1, 1, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-05-27 06:43:02,782:app.api.api_v1.endpoints.internal_employee:INFO:POST url=http://localhost/api/v1/internal-employee/ , status_code = 201
+2022-05-27 06:43:15,877:app.api.api_v1.endpoints.internal_employee:INFO:POST url=http://localhost/api/v1/internal-employee/ , status_code = 201
+2022-05-27 06:44:02,844:app.api.api_v1.endpoints.internal_employee:INFO:POST url=http://localhost/api/v1/internal-employee/ , status_code = 201
+2022-05-27 06:45:37,771:app.api.api_v1.endpoints.internal_employee:INFO:POST url=http://localhost/api/v1/internal-employee/ , status_code = 201
+2022-05-27 06:45:42,987:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:46:14,520:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:48:38,231:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:49:28,262:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:49:35,909:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:51:28,540:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/4, status_code = 200
+2022-05-27 06:51:36,655:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/4, status_code = 200
+2022-05-27 06:52:12,973:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:52:20,618:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-27 06:55:09,169:app.api.api_v1.endpoints.internal_employee:WARNING:POST url=http://localhost/api/v1/internal-employee/, (mariadb.IntegrityError) Cannot add or update a child row: a foreign key constraint fails (`employee`.`internal_employee`, CONSTRAINT `internal_employee_ibfk_6` FOREIGN KEY (`statusId`) REFERENCES `employee_status` (`id`))
+[SQL: INSERT INTO internal_employee (`individualId`, `legalOrganizationlId`, `fullnameDeclinationId`, `financialAccountId`, iin, `personnelNumber`, `lastName`, `firstName`, `middleName`, `birthDate`, `workStartDate`, `isReserveMember`, `isInsider`, `isActive`, gender, `statusId`, `gradeId`, `maritalStatusId`, `militaryServiceAttitudeId`, `nationalityGenderId`, `ldapLoginId`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 1, 1, 1, '312', '312', 'string', 'string', 'string', '2022-05-27', '2022-05-27', 1, 1, 1, 'string', 1, 1, 1, 1, 1, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-05-27 06:55:25,983:app.api.api_v1.endpoints.internal_employee:WARNING:POST url=http://localhost/api/v1/internal-employee/, (mariadb.IntegrityError) Cannot add or update a child row: a foreign key constraint fails (`employee`.`internal_employee`, CONSTRAINT `internal_employee_ibfk_6` FOREIGN KEY (`statusId`) REFERENCES `employee_status` (`id`))
+[SQL: INSERT INTO internal_employee (`individualId`, `legalOrganizationlId`, `fullnameDeclinationId`, `financialAccountId`, iin, `personnelNumber`, `lastName`, `firstName`, `middleName`, `birthDate`, `workStartDate`, `isReserveMember`, `isInsider`, `isActive`, gender, `statusId`, `gradeId`, `maritalStatusId`, `militaryServiceAttitudeId`, `nationalityGenderId`, `ldapLoginId`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1, 1, 1, 1, '312', '312', 'string', 'string', 'string', '2022-05-27', '2022-05-27', 1, 1, 1, 'string', 1, 1, 1, 1, 1, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-05-27 06:56:10,709:app.api.api_v1.endpoints.internal_employee:INFO:POST url=http://localhost/api/v1/internal-employee/ , status_code = 201
+2022-05-27 06:56:39,041:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
